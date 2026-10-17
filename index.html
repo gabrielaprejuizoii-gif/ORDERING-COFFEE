@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lesson 6 · Coffee Shops &amp; Restaurants</title>
+<style>
+:root{color-scheme:light;--bg:#fbf7f0;--card:#fff;--ink:#3b2a20;--cof:#6f4e37;--lt:#c8a27c;--cr:#f1e6d6;--ok:#5b7f4a;--no:#b0463a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Georgia,'Times New Roman',serif}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:700;margin:0 0 .4em;line-height:1.15}
+.w{max-width:860px;margin:0 auto;padding:0 20px}
+section{padding:56px 0;border-bottom:1px solid var(--cr)}
+.tag{font:600 12px/1 system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--lt);margin-bottom:10px}
+.hero{padding:72px 0 56px;text-align:center}
+.hero h1{font-size:clamp(34px,7vw,60px);color:var(--cof)}
+.hero em{color:var(--lt)}
+.sub{font:16px system-ui,sans-serif;color:#7a6556}
+.goals{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:28px;text-align:left}
+.goal{background:var(--card);border:1px solid var(--cr);border-radius:14px;padding:14px 16px;font:15px system-ui,sans-serif}
+.cast{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.av{text-align:center;font:13px system-ui,sans-serif;width:90px}
+.av b{display:grid;place-items:center;width:62px;height:62px;border-radius:50%;margin:0 auto 6px;color:#fff;font:700 26px Georgia,serif}
+h2{font-size:clamp(26px,5vw,36px);color:var(--cof)}
+.box{background:var(--card);border:1px solid var(--cr);border-radius:16px;padding:20px;margin:18px 0}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.pill{display:inline-block;background:var(--cr);color:var(--cof);border-radius:99px;padding:3px 12px;font:14px system-ui,sans-serif;margin:2px}
+.rule{border-left:4px solid var(--lt);padding:6px 14px;background:#fff;margin:12px 0;font-size:16px}
+button{font:600 15px system-ui,sans-serif;border:1.5px solid var(--cof);background:#fff;color:var(--cof);border-radius:99px;padding:8px 16px;cursor:pointer;margin:3px}
+button:hover{background:var(--cr)}button.pri{background:var(--cof);color:#fff}
+.q{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border-bottom:1px dashed var(--cr);padding:10px 0}
+.q span.i{font-size:20px}
+.fb{font:600 14px system-ui,sans-serif;min-width:90px}
+.ok{color:var(--ok)}.no{color:var(--no)}
+select{font:16px system-ui,sans-serif;padding:6px 10px;border:1.5px solid var(--lt);border-radius:10px;background:#fff;color:var(--ink)}
+.menu{background:#fffdf8;border:2px solid var(--lt);border-radius:6px;padding:26px;max-width:460px;margin:18px auto;box-shadow:0 8px 24px rgba(111,78,55,.12)}
+.menu h3{text-align:center;letter-spacing:.15em;text-transform:uppercase;font-size:20px;color:var(--cof)}
+.mi{display:flex;align-items:baseline;gap:8px;padding:5px 0;font-size:16px}
+.mi i{flex:1;border-bottom:1px dotted var(--lt)}.mi b{color:var(--cof);font-family:system-ui,sans-serif}
+.mi small{display:block;font:13px system-ui,sans-serif;color:#8a7466}
+.bub{max-width:80%;padding:10px 16px;border-radius:18px;margin:8px 0;font-size:16px;position:relative}
+.wt{background:var(--cr);border-bottom-left-radius:4px}
+.me{background:var(--cof);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+.who{font:600 11px system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;opacity:.7;display:block}
+.ph{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+.ph div{background:#fff;border:1px solid var(--cr);border-radius:12px;padding:12px 14px;font-size:16px}
+.ph small{display:block;font:13px system-ui,sans-serif;color:#8a7466}
+.out{background:var(--cr);border-radius:14px;padding:16px;min-height:60px;font-size:18px;color:var(--cof)}
+.chk label{display:block;padding:8px 0;font:16px system-ui,sans-serif;cursor:pointer}
+footer{text-align:center;padding:40px 20px;font:14px system-ui,sans-serif;color:#8a7466}
+</style></head><body>
+
+<div class="w hero">
+ <div class="tag">Lesson 6 · New York Edition</div>
+ <h1>Coffee Shops &amp; Restaurants<br><em>Ordering Like a New Yorker</em></h1>
+ <p class="sub">Hi, Brenda! ☕ Today you order brunch like Carrie, Miranda, Charlotte and Samantha.</p>
+ <div class="cast">
+  <div class="av"><b style="background:#c8a27c">C</b>Carrie<br>writes</div>
+  <div class="av"><b style="background:#6f4e37">M</b>Miranda<br>works</div>
+  <div class="av"><b style="background:#d9b8a0">C</b>Charlotte<br>dreams</div>
+  <div class="av"><b style="background:#8a6a4f">S</b>Samantha<br>decides</div>
+ </div>
+ <div class="goals">
+  <div class="goal">🥐 Countable &amp; uncountable nouns</div>
+  <div class="goal">🍰 Some and any</div>
+  <div class="goal">☕ Order food and drinks</div>
+  <div class="goal">💲 Ask about prices and ingredients</div>
+ </div>
+</div>
+
+<section><div class="w">
+ <div class="tag">Step 1 · Grammar</div>
+ <h2>Countable or uncountable?</h2>
+ <p>Carrie counts her shoes. But she can’t count her coffee!</p>
+ <div class="two">
+  <div class="box"><h3>Countable ✔️</h3>You can count: <b>1, 2, 3…</b><br>
+   <span class="pill">a croissant</span><span class="pill">two bagels</span><span class="pill">an egg</span>
+   <div class="rule">Use <b>a / an</b> and the plural: <i>a cupcake → three cupcakes</i></div></div>
+  <div class="box"><h3>Uncountable ✖️</h3>You can’t count: no plural.<br>
+   <span class="pill">coffee</span><span class="pill">milk</span><span class="pill">sugar</span><span class="pill">water</span>
+   <div class="rule">Use a measure: <i>a cup of coffee, a glass of water, a slice of cake</i></div></div>
+ </div>
+ <div class="box"><h3>Challenge: choose!</h3><div id="sort"></div><p class="sub" id="sortScore"></p></div>
+</div></section>
+
+<section><div class="w">
+ <div class="tag">Step 2 · Grammar</div>
+ <h2>Some &amp; Any</h2>
+ <div class="two">
+  <div class="box"><h3>some</h3>Positive sentences<div class="rule">I’d like <b>some</b> coffee.<br>We have <b>some</b> muffins.</div></div>
+  <div class="box"><h3>any</h3>Questions and negatives<div class="rule">Do you have <b>any</b> milk?<br>We don’t have <b>any</b> bagels.</div></div>
+ </div>
+ <div class="rule">💡 Offers and polite requests use <b>some</b>: <i>Would you like some cake?</i></div>
+ <div class="box"><h3>Challenge: some or any?</h3><div id="sa"></div></div>
+</div></section>
+
+<section><div class="w">
+ <div class="tag">Step 3 · Vocabulary</div>
+ <h2>The Magnolia Café menu</h2>
+ <div class="menu"><h3>☕ Magnolia Café</h3>
+  <div class="mi">Cappuccino<i></i><b>$5</b></div>
+  <div class="mi">Iced latte<i></i><b>$6</b></div>
+  <div class="mi">Croissant<i></i><b>$4</b></div>
+  <div class="mi"><span>Avocado toast<small>bread, avocado, egg, salt</small></span><i></i><b>$12</b></div>
+  <div class="mi"><span>Pancakes<small>flour, milk, butter, syrup</small></span><i></i><b>$11</b></div>
+  <div class="mi">Cupcake<i></i><b>$4</b></div>
+ </div>
+ <h3>Useful phrases</h3>
+ <div class="ph">
+  <div>Can I have a cappuccino, please?<small>Posso pedir um cappuccino?</small></div>
+  <div>I’d like some pancakes.<small>Eu gostaria de panquecas.</small></div>
+  <div>How much is the croissant?<small>Quanto custa o croissant?</small></div>
+  <div>What’s in the avocado toast?<small>O que tem na torrada?</small></div>
+  <div>Do you have any vegan options?<small>Vocês têm opções veganas?</small></div>
+  <div>Is that for here or to go?<small>Para comer aqui ou levar?</small></div>
+  <div>Can I have the check, please?<small>A conta, por favor.</small></div>
+  <div>It’s eight dollars.<small>São oito dólares.</small></div>
+ </div>
+</div></section>
+
+<section><div class="w">
+ <div class="tag">Step 4 · Dialogue</div>
+ <h2>Carrie’s Sunday brunch</h2>
+ <div class="box">
+  <div class="bub wt"><span class="who">Waiter</span>Good morning! What can I get you?</div>
+  <div class="bub me"><span class="who">Carrie</span>Hi! Can I have a cappuccino, please?</div>
+  <div class="bub wt"><span class="who">Waiter</span>Sure. Anything to eat?</div>
+  <div class="bub me"><span class="who">Carrie</span>Do you have any croissants?</div>
+  <div class="bub wt"><span class="who">Waiter</span>Yes, we have some. They’re four dollars.</div>
+  <div class="bub me"><span class="who">Carrie</span>Perfect. One croissant, please.</div>
+  <div class="bub wt"><span class="who">Waiter</span>For here or to go?</div>
+  <div class="bub me"><span class="who">Carrie</span>For here, thanks!</div>
+ </div>
+ <div class="box"><h3>Comprehension</h3><div id="comp"></div></div>
+</div></section>
+
+<section><div class="w">
+ <div class="tag">Step 5 · Roleplay</div>
+ <h2>Your turn, Brenda! 🗽</h2>
+ <p>Build your order. Then read it out loud as if the waiter is in front of you.</p>
+ <div class="box">
+  <p>☕ Drink: <select id="d"><option>a cappuccino</option><option>an iced latte</option><option>some water</option><option>some orange juice</option></select></p>
+  <p>🥐 Food: <select id="f"><option>a croissant</option><option>some pancakes</option><option>some avocado toast</option><option>a cupcake</option></select></p>
+  <p>📍 <select id="p"><option>for here</option><option>to go</option></select></p>
+  <button class="pri" onclick="build()">Make my order</button>
+  <div class="out" id="out" style="margin-top:12px">Your order will appear here ✨</div>
+ </div>
+ <div class="box"><h3>Who plays who?</h3>
+  <p><b>Brenda</b> is the customer. <b>Teacher</b> is the waiter. Use at least: <i>Can I have…? · Do you have any…? · How much is…? · Can I have the check, please?</i></p>
+  <div class="chk" id="chk"></div>
+ </div>
+ <div class="box"><h3>Bonus: Samantha’s order</h3>
+  <p>Samantha is hungry. Write 3 sentences: one with <b>some</b>, one with <b>any</b> (question), one with <b>any</b> (negative).</p></div>
+</div></section>
+
+<footer>Great job, Brenda! 🥂 Next lesson: see you soon, sweetie.</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+function row(h,html){const d=document.createElement('div');d.className='q';d.innerHTML=html;h.appendChild(d);return d}
+// Sort
+const items=[['🥐','croissant',1],['☕','coffee',0],['🥚','egg',1],['🥛','milk',0],['🧁','cupcake',1],['🍯','sugar',0],['🥯','bagel',1],['💧','water',0]];
+let sc=0,done=0;
+items.forEach(([e,n,c])=>{const d=row($('sort'),`<span><span class="i">${e}</span> <b>${n}</b></span><span><button>Countable</button><button>Uncountable</button><span class="fb"></span></span>`);
+ const [b1,b2]=d.querySelectorAll('button'),fb=d.querySelector('.fb');
+ [b1,b2].forEach((b,i)=>b.onclick=()=>{if(d.dataset.d)return;d.dataset.d=1;done++;const ok=(i===0)===!!c;if(ok)sc++;fb.className='fb '+(ok?'ok':'no');fb.textContent=ok?'✔ Yes!':'✖ '+(c?'countable':'uncountable');$('sortScore').textContent=`Score: ${sc}/${items.length}`})});
+// Some/any
+const sa=[['I’d like ___ tea.','some'],['Do you have ___ cake?','any'],['We don’t have ___ bagels.','any'],['Would you like ___ juice?','some'],['Is there ___ milk?','any']];
+sa.forEach(([s,a])=>{const d=row($('sa'),`<span>${s}</span><span><button>some</button><button>any</button><span class="fb"></span></span>`);
+ const bs=d.querySelectorAll('button'),fb=d.querySelector('.fb');
+ bs.forEach(b=>b.onclick=()=>{const ok=b.textContent===a;fb.className='fb '+(ok?'ok':'no');fb.textContent=ok?'✔ Yes!':'✖ Try again'})});
+// Comprehension
+const cq=[['What does Carrie order to drink?',['A cappuccino','An iced latte'],0],['How much is the croissant?',['$5','$4'],1],['Does the café have croissants?',['Yes','No'],0]];
+cq.forEach(([q,o,a])=>{const d=row($('comp'),`<span>${q}</span><span>${o.map(x=>`<button>${x}</button>`).join('')}<span class="fb"></span></span>`);
+ const bs=d.querySelectorAll('button'),fb=d.querySelector('.fb');
+ bs.forEach((b,i)=>b.onclick=()=>{const ok=i===a;fb.className='fb '+(ok?'ok':'no');fb.textContent=ok?'✔ Yes!':'✖ Try again'})});
+// Roleplay
+function build(){$('out').innerHTML=`“Hi! Can I have ${$('d').value} and ${$('f').value}, please? ${$('p').value[0].toUpperCase()+$('p').value.slice(1)}, thanks!”`}
+['I said hello and ordered a drink','I ordered food with “I’d like some…”','I asked “Do you have any…?”','I asked “How much is…?”','I asked for the check'].forEach(t=>{const l=document.createElement('label');l.innerHTML=`<input type="checkbox"> ${t}`;$('chk').appendChild(l)});
+</script>
+</body></html>
